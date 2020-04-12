@@ -41,17 +41,17 @@ function setup() {
     classifier = mobilenet.classification(video, videoReady);
 
     button = createButton('train');
-    button.mousePressed(function() {
+    button.mousePressed(function () {
         classifier.addImage('train');
     });
 
     newButton = createButton('train');
-    newButton.mousePressed(function() {
+    newButton.mousePressed(function () {
         classifier.train(whileTraining);
     });
 }
 
-function draw(){
+function draw() {
     background(0);
     image(video, 0, 0, 320, 240);
     fill(255);
