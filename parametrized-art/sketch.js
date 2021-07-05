@@ -1,5 +1,4 @@
-var t = 0;
-const NUM_LINES = 10;
+	var t = 0;
 
 function x1(t) {
     return sin(t / 10) * 100 + sin(t / 5) * 20;
@@ -20,23 +19,30 @@ function y2(t) {
 function setup() {
     createCanvas(500, 500);
     background(0);
+    createP('');
+    createP('Framerate:');
+    slider_fps = createSlider(1, 120, 60);
+    createP('Lines');
+    slider_lines = createSlider(1, 50, 5);
+    createP('Speed');
+    slider_speed = createSlider(1, 10, 5);
 }
 
 var x_value;
 var y_value;
 
-
 function draw() {
     background(0)
     stroke(255);
     strokeWeight(5);
+    frameRate(slider_fps.value());
 
     translate(width / 2, height / 2);
 
-    for (var i = 0; i < NUM_LINES; i++) {
+    for (let i = 0; i < slider_lines.value(); i++) {
         line(x1(t + i), y1(t + i), x2(t + i), y2(t + i));
     }
 
     line(x1(t), y1(t), x2(t), y2(t))
-    t += 0.5;
+    t += 2.5 / slider_speed.value();
 }
