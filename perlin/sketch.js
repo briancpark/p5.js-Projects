@@ -14,6 +14,7 @@ function draw() {
     var yoff = 0;
 
     loadPixels();
+    noiseDetail(100);
     for (var y = 0; y < height; y++) {
         var xoff = 0;
         for (var x = 0; x < width; x++) {
