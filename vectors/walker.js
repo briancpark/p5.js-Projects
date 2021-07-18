@@ -3,10 +3,20 @@ class Walker {
         this.pos = createVector(x, y);
         this.vel = p5.Vector.random2D();
         this.vel.mult(random(3));
+        this.acc = p5.Vector.random2D();
+        this.acc.setMag(0.01);
     }
 
     update() {
-        this.pos.add(this.vel)
+        let mouse = createVector(mouseX, mouseY);
+        this.acc = p5.Vector.sub(mouse, this.pos);
+        this.acc.setMag(1);
+
+        //this.acc = p5.Vector.random2D();
+        this.vel.add(this.acc);
+        this.pos.add(this.vel);
+
+        //this.vel.limit(2);
     }
 
     show() {
