@@ -12,7 +12,7 @@ var color = {
 var size;
 
 function setup() {
-    createCanvas(1000, 1000);
+    createCanvas(windowWidth, windowHeight);
     frameRate(60);
     background(0);
 }

@@ -2,9 +2,9 @@ var x;
 var y;
 
 function setup() {
-    createCanvas(400, 400);
-    x = 200;
-    y = 200;
+    createCanvas(windowWidth, windowHeight);
+    x = windowWidth / 2;
+    y = windowHeight / 2;
     background(0);
 }
 

@@ -1,11 +1,11 @@
 function setup() {
-    createCanvas(400, 400);
+    createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
     background(0);
 
-    let pos = createVector(200, 200);
+    let pos = createVector(windowWidth / 2, windowHeight / 2);
     let mouse = createVector(mouseX, mouseY);
 
     let v = p5.Vector.sub(mouse, pos);

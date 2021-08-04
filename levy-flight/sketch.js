@@ -1,9 +1,9 @@
 var pos;
 
 function setup() {
-    createCanvas(400, 400);
+    createCanvas(windowWidth, windowHeight);
     background(0);
-    pos = createVector(200, 200);
+    pos = createVector(windowWidth / 2, windowHeight / 2);
     prev = pos.copy();
     console.log(pos);
 }

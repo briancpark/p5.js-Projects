@@ -1,7 +1,7 @@
 let mover;
 
 function setup() {
-    createCanvas(400, 400);
+    createCanvas(windowWidth, windowHeight);
     moverA = new Mover(100, 200, 2);
     moverB = new Mover(300, 200, 4);
 }

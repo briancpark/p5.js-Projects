@@ -5,7 +5,7 @@ var start = 0;
 var inc = 0.001;
 
 function setup() {
-    createCanvas(400, 400);
+    createCanvas(windowWidth, windowHeight);
     pixelDensity(1);
 }
 

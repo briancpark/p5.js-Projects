@@ -4,7 +4,7 @@ for (var i = 0; i < n; i++)
     drops.push(new Drop());
 
 function setup() {
-    createCanvas(640, 320);
+    createCanvas(windowWidth, windowHeight);
     for (var i = 0; i < drops.length; i++) {
         drops[i] = new Drop();
     }
